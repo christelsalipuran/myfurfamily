@@ -35,7 +35,6 @@ public class PetRecords extends javax.swing.JFrame {
         tbl_pets = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
@@ -44,9 +43,19 @@ public class PetRecords extends javax.swing.JFrame {
 
         logout_btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         logout_btn.setText("LOGOUT");
+        logout_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logout_btnActionPerformed(evt);
+            }
+        });
 
         back_btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         back_btn.setText("BACK");
+        back_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_btnActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Pet Name:");
 
@@ -125,7 +134,6 @@ public class PetRecords extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tbl_pets.setBackground(java.awt.SystemColor.controlShadow);
         tbl_pets.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -212,6 +220,18 @@ public class PetRecords extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void back_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_btnActionPerformed
+    myfurfamily.dash.Dashboard dash = new myfurfamily.dash.Dashboard();
+            dash.setVisible(true);
+            this.dispose();         // TODO add your handling code here:
+    }//GEN-LAST:event_back_btnActionPerformed
+
+    private void logout_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logout_btnActionPerformed
+    myfurfamily.auth.LoginForm dash = new myfurfamily.auth.LoginForm();
+            dash.setVisible(true);
+            this.dispose();           // TODO add your handling code here:
+    }//GEN-LAST:event_logout_btnActionPerformed
 
     
     public static void main(String args[]) {

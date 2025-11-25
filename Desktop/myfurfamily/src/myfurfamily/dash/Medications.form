@@ -108,6 +108,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="LOGOUT"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logout_btnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="back_btn">
               <Properties>
@@ -116,6 +119,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="BACK"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_btnActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="MedicationsForm">
 
@@ -280,9 +286,6 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tbl_medications">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="a0" green="a0" id="Control Shadow" palette="2" red="a0" type="palette"/>
-                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="7" rowCount="21">
                         <Column editable="true" title="pet_id" type="java.lang.Integer"/>
