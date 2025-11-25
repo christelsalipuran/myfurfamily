@@ -202,6 +202,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="pet_name">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pet_nameActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel2">
                   <Properties>
@@ -209,6 +212,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="species">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="speciesActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
@@ -228,16 +234,25 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ADD"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="add_petActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="update_pet">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="UPDATE"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="update_petActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="delete_pet">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="DELETE"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="delete_petActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
@@ -262,7 +277,7 @@
                         <Column editable="true" title="pet_name" type="java.lang.String"/>
                         <Column editable="true" title="species" type="java.lang.String"/>
                         <Column editable="true" title="breed" type="java.lang.String"/>
-                        <Column editable="true" title="age" type="java.lang.Integer"/>
+                        <Column editable="true" title="age" type="java.lang.String"/>
                         <Column editable="true" title="med_notes" type="java.lang.String"/>
                       </Table>
                     </Property>

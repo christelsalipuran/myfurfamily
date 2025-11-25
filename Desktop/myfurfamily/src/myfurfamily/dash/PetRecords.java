@@ -1,13 +1,127 @@
 
 package myfurfamily.dash;
 
+import java.sql.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.HeadlessException;
+import myfurfamily.db.DatabaseConnection;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
+
 public class PetRecords extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(PetRecords.class.getName());
 
     public PetRecords() {
-        initComponents();
+    initComponents();
+    loadPets();
+    tbl_pets.setDefaultEditor(Object.class, null); // disable editing inside table
+}
+    private void loadPets() {
+    DefaultTableModel model = (DefaultTableModel) tbl_pets.getModel();
+    model.setRowCount(0);
+
+    String sql = "SELECT * FROM tbl_pets";
+
+    try (Connection conn = DatabaseConnection.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql);
+         ResultSet rs = ps.executeQuery()) {
+
+        while (rs.next()) {
+            model.addRow(new Object[]{
+                rs.getString("pet_name"),
+                rs.getString("species"),
+                rs.getString("breed"),
+                rs.getInt("age"),
+                rs.getString("med_notes")
+            });
+        }
+        tbl_pets.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+        int row = tbl_pets.getSelectedRow();
+
+        pet_name.setText(tbl_pets.getValueAt(row, 0).toString());
+        species.setText(tbl_pets.getValueAt(row, 1).toString());
+        breed.setText(tbl_pets.getValueAt(row, 2).toString());
+        age.setText(tbl_pets.getValueAt(row, 3).toString());
+        med_notes.setText(tbl_pets.getValueAt(row, 4).toString());
     }
+});
+
+
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Error loading pets: " + e.getMessage());
+    }
+}
+    
+    private void addPet() {
+    String sql = "INSERT INTO tbl_pets (pet_name, species, breed, age, med_notes) VALUES (?, ?, ?, ?, ?)";
+
+    try (Connection conn = DatabaseConnection.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+
+        ps.setString(1, pet_name.getText());
+        ps.setString(2, species.getText());
+        ps.setString(3, breed.getText());
+        ps.setInt(3, Integer.parseInt(age.getText()));
+        ps.setString(5, med_notes.getText());
+
+        ps.executeUpdate();
+        JOptionPane.showMessageDialog(this, "Pet added successfully!");
+
+        loadPets();
+     
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error adding pet: " + e.getMessage());
+    }
+}
+    
+    private void updatePet() {
+    String sql = "UPDATE tbl_pets SET species=?, breed=?, age=?, med_notes=? WHERE pet_name=?";
+
+    try (Connection conn = DatabaseConnection.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+
+        ps.setString(1, species.getText());
+        ps.setString(2, breed.getText());
+        ps.setInt(3, Integer.parseInt(age.getText()));
+        ps.setString(4, med_notes.getText());
+        ps.setString(5, pet_name.getText());
+
+        ps.executeUpdate();
+        JOptionPane.showMessageDialog(this, "Pet updated successfully!");
+
+        loadPets();
+        
+
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Error updating pet: " + e.getMessage());
+    }
+}
+
+    private void deletePet() {
+    String sql = "DELETE FROM tbl_pets WHERE pet_name=?";
+
+    try (Connection conn = DatabaseConnection.getConnection();
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+
+        ps.setString(1, pet_name.getText());
+        ps.executeUpdate();
+
+        JOptionPane.showMessageDialog(this, "Pet deleted successfully!");
+        loadPets();
+        
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Error deleting pet: " + e.getMessage());
+    }
+}
+
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -59,17 +173,44 @@ public class PetRecords extends javax.swing.JFrame {
 
         jLabel1.setText("Pet Name:");
 
+        pet_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pet_nameActionPerformed(evt);
+            }
+        });
+
         jLabel2.setText("Species:");
+
+        species.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                speciesActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Breed:");
 
         jLabel4.setText("Medicine Notes:");
 
         add_pet.setText("ADD");
+        add_pet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add_petActionPerformed(evt);
+            }
+        });
 
         update_pet.setText("UPDATE");
+        update_pet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                update_petActionPerformed(evt);
+            }
+        });
 
         delete_pet.setText("DELETE");
+        delete_pet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_petActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Age:");
 
@@ -163,7 +304,7 @@ public class PetRecords extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -233,6 +374,26 @@ public class PetRecords extends javax.swing.JFrame {
             this.dispose();           // TODO add your handling code here:
     }//GEN-LAST:event_logout_btnActionPerformed
 
+    private void add_petActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_petActionPerformed
+        addPet();// TODO add your handling code here:
+    }//GEN-LAST:event_add_petActionPerformed
+
+    private void update_petActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_petActionPerformed
+        updatePet();        // TODO add your handling code here:
+    }//GEN-LAST:event_update_petActionPerformed
+
+    private void delete_petActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_petActionPerformed
+    deletePet();        // TODO add your handling code here:
+    }//GEN-LAST:event_delete_petActionPerformed
+
+    private void pet_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pet_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pet_nameActionPerformed
+
+    private void speciesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_speciesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_speciesActionPerformed
+
     
     public static void main(String args[]) {
       
@@ -261,4 +422,7 @@ public class PetRecords extends javax.swing.JFrame {
     private javax.swing.JTable tbl_pets;
     private javax.swing.JButton update_pet;
     // End of variables declaration//GEN-END:variables
+
+    
 }
+
