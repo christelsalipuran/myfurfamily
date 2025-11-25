@@ -71,7 +71,7 @@
                           <Component id="back_btn" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="15" max="32767" attributes="0"/>
-                      <Component id="PetForm" min="-2" max="-2" attributes="0"/>
+                      <Component id="ContactsForm" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="472" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -83,7 +83,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="PetForm" max="32767" attributes="0"/>
+                          <Component id="ContactsForm" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="back_btn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -120,7 +120,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tbl_pets">
+                <Component class="javax.swing.JTable" name="tbl_contacts">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="a0" green="a0" id="Control Shadow" palette="2" red="a0" type="palette"/>
@@ -182,7 +182,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="PetForm">
+            <Container class="javax.swing.JPanel" name="ContactsForm">
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -190,8 +190,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="name_txt" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="address_txt" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="add_pet" min="-2" pref="91" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -199,24 +199,24 @@
                                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                   <Component id="delete_pet" min="-2" pref="101" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="pet_name" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="pet_name1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="name_txtbox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="pet_id" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="contact_txt" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="contact_txtbox" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="species" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                      <Component id="phone_txt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="phone_txtbox" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="species1" max="32767" attributes="0"/>
-                                      <Component id="jLabel7" max="32767" attributes="0"/>
+                                      <Component id="email_txtbox" max="32767" attributes="0"/>
+                                      <Component id="email_txt" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="pet_name3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="pet_name2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="notes_txt" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="notes_txtbox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="address_txtbox" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="22" max="32767" attributes="0"/>
                       </Group>
@@ -226,38 +226,38 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="pet_id" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="contact_txt" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pet_name1" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="contact_txtbox" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="name_txt" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="pet_name" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="name_txtbox" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="email_txt" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="phone_txt" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="species" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="species1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="phone_txtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="email_txtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="address_txt" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pet_name2" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="address_txtbox" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Component id="notes_txt" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pet_name3" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="notes_txtbox" min="-2" pref="47" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="add_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -270,24 +270,24 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="name_txt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Name:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="pet_name">
+                <Component class="javax.swing.JTextField" name="name_txtbox">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="phone_txt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Phone:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="species">
+                <Component class="javax.swing.JTextField" name="phone_txtbox">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="speciesActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phone_txtboxActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel4">
+                <Component class="javax.swing.JLabel" name="address_txt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Address:"/>
                   </Properties>
@@ -307,30 +307,30 @@
                     <Property name="text" type="java.lang.String" value="DELETE"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="pet_id">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Select Pet By ID:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel6">
+                <Component class="javax.swing.JLabel" name="contact_txt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Contact Type:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="pet_name1">
+                <Component class="javax.swing.JTextField" name="contact_txtbox">
                 </Component>
-                <Component class="javax.swing.JTextField" name="species1">
+                <Component class="javax.swing.JTextField" name="email_txtbox">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel7">
+                <Component class="javax.swing.JLabel" name="email_txt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Email:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="pet_name2">
+                <Component class="javax.swing.JTextField" name="address_txtbox">
                 </Component>
-                <Component class="javax.swing.JTextField" name="pet_name3">
+                <Component class="javax.swing.JTextField" name="notes_txtbox">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel5">
+                <Component class="javax.swing.JLabel" name="notes_txt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Notes:"/>
                   </Properties>
