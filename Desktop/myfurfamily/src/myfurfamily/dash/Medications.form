@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -18,15 +18,14 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,4,0,0,3,-113"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="AppointmentSched">
+    <Container class="javax.swing.JPanel" name="Medications">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-          <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="9" ipadY="22" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="18" weightX="0.0" weightY="0.0"/>
+          <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="9" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="18" weightX="0.0" weightY="0.0"/>
         </Constraint>
       </Constraints>
 
@@ -41,9 +40,12 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="480" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="500" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Component id="jPanel2" alignment="0" pref="480" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -72,7 +74,7 @@
                           <Component id="back_btn" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AppointmentForm" min="-2" max="-2" attributes="0"/>
+                      <Component id="MedicationsForm" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="443" max="-2" attributes="0"/>
                       <EmptySpace pref="15" max="32767" attributes="0"/>
@@ -89,10 +91,10 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="logout_btn" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
-                          <Component id="AppointmentForm" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="1" pref="439" max="32767" attributes="0"/>
+                          <Component id="MedicationsForm" alignment="1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -114,7 +116,7 @@
                 <Property name="text" type="java.lang.String" value="BACK"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="AppointmentForm">
+            <Container class="javax.swing.JPanel" name="MedicationsForm">
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -122,29 +124,38 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="start_datetxtbox" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="end_datetxtbox" min="-2" pref="134" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="notestxt" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="new_appointment_txt" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="mednametxt" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="add_reason" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <Component id="add_pet" min="-2" pref="79" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="update_reason" min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Component id="update_pet" min="-2" pref="91" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="delete_reason" max="32767" attributes="0"/>
+                                      <Component id="delete_pet" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="reasontxtbox" alignment="0" min="-2" pref="281" max="-2" attributes="0"/>
+                                  <Component id="medname_txtbox" alignment="0" min="-2" pref="281" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="datetxtbox" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
-                                          <Component id="datetxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="species" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
+                                          <Component id="dosagetxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="start_datetxt" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="timetxt" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="timetxtbox" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
+                                          <Component id="end_datetxt" min="-2" max="-2" attributes="0"/>
+                                          <Component id="frequencytxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="breed" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
+                              <Component id="notestxtbox" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="27" max="32767" attributes="0"/>
                       </Group>
@@ -153,27 +164,41 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="mednametxt" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="medname_txtbox" min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="dosagetxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="frequencytxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="species" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="breed" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="new_appointment_txt" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="reasontxtbox" min="-2" pref="72" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="datetxt" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="timetxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="start_datetxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="end_datetxt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="datetxtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="timetxtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="start_datetxtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="end_datetxtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                          <Component id="notestxt" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="notestxtbox" min="-2" pref="67" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="add_reason" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="update_reason" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="delete_reason" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="add_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="update_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="delete_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -181,45 +206,66 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="new_appointment_txt">
+                <Component class="javax.swing.JLabel" name="mednametxt">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="New Appointment:"/>
+                    <Property name="text" type="java.lang.String" value="Medicine Name:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="reasontxtbox">
+                <Component class="javax.swing.JTextField" name="medname_txtbox">
                 </Component>
-                <Component class="javax.swing.JLabel" name="datetxt">
+                <Component class="javax.swing.JLabel" name="dosagetxt">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Date:"/>
+                    <Property name="text" type="java.lang.String" value="Dosage:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="datetxtbox">
+                <Component class="javax.swing.JTextField" name="species">
                 </Component>
-                <Component class="javax.swing.JLabel" name="timetxt">
+                <Component class="javax.swing.JLabel" name="frequencytxt">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Time:"/>
+                    <Property name="text" type="java.lang.String" value="Frequency:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="add_reason">
+                <Component class="javax.swing.JTextField" name="notestxtbox">
+                </Component>
+                <Component class="javax.swing.JButton" name="add_pet">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="ADD"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="update_reason">
+                <Component class="javax.swing.JButton" name="update_pet">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="UPDATE"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="delete_reason">
+                <Component class="javax.swing.JButton" name="delete_pet">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="DELETE"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="timetxtbox">
+                <Component class="javax.swing.JLabel" name="notestxt">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Notes:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="breed">
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Select Pet By ID"/>
+                    <Property name="text" type="java.lang.String" value="Select Pet By ID:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="start_datetxt">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Medication Start:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="start_datetxtbox">
+                </Component>
+                <Component class="javax.swing.JTextField" name="end_datetxtbox">
+                </Component>
+                <Component class="javax.swing.JLabel" name="end_datetxt">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Medication End:"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -231,21 +277,39 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tbl_appointments">
+                <Component class="javax.swing.JTable" name="tbl_pets">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="a0" green="a0" id="Control Shadow" palette="2" red="a0" type="palette"/>
                     </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="20">
+                      <Table columnCount="7" rowCount="21">
                         <Column editable="true" title="pet_id" type="java.lang.Integer"/>
-                        <Column editable="true" title="reason" type="java.lang.String"/>
-                        <Column editable="true" title="date" type="java.lang.String"/>
-                        <Column editable="true" title="time" type="java.lang.String"/>
+                        <Column editable="true" title="med_name" type="java.lang.String"/>
+                        <Column editable="true" title="dosage" type="java.lang.String"/>
+                        <Column editable="true" title="frequency" type="java.lang.String"/>
+                        <Column editable="true" title="start_date" type="java.lang.String"/>
+                        <Column editable="true" title="end_date" type="java.lang.String"/>
+                        <Column editable="true" title="notes" type="java.lang.String"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>

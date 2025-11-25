@@ -34,15 +34,15 @@ public class AppointmentSched extends javax.swing.JFrame {
         logout_btn = new javax.swing.JButton();
         back_btn = new javax.swing.JButton();
         AppointmentForm = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        reason = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        date = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        new_appointment_txt = new javax.swing.JLabel();
+        reasontxtbox = new javax.swing.JTextField();
+        datetxt = new javax.swing.JLabel();
+        datetxtbox = new javax.swing.JTextField();
+        timetxt = new javax.swing.JLabel();
         add_reason = new javax.swing.JButton();
         update_reason = new javax.swing.JButton();
         delete_reason = new javax.swing.JButton();
-        time = new javax.swing.JTextField();
+        timetxtbox = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_appointments = new javax.swing.JTable();
@@ -60,11 +60,11 @@ public class AppointmentSched extends javax.swing.JFrame {
         back_btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         back_btn.setText("BACK");
 
-        jLabel1.setText("New Appointment:");
+        new_appointment_txt.setText("New Appointment:");
 
-        jLabel2.setText("Date:");
+        datetxt.setText("Date:");
 
-        jLabel3.setText("Time:");
+        timetxt.setText("Time:");
 
         add_reason.setText("ADD");
 
@@ -83,22 +83,22 @@ public class AppointmentSched extends javax.swing.JFrame {
                 .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
                     .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1)
+                        .addComponent(new_appointment_txt)
                         .addGroup(AppointmentFormLayout.createSequentialGroup()
                             .addComponent(add_reason, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(update_reason, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(delete_reason, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(reason, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(reasontxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(AppointmentFormLayout.createSequentialGroup()
                             .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2))
+                                .addComponent(datetxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(datetxt))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3)
-                                .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(timetxt)
+                                .addComponent(timetxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         AppointmentFormLayout.setVerticalGroup(
@@ -107,17 +107,17 @@ public class AppointmentSched extends javax.swing.JFrame {
                 .addGap(69, 69, 69)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
+                .addComponent(new_appointment_txt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(reason, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                .addComponent(reasontxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datetxt)
+                    .addComponent(timetxt))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(datetxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(timetxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(97, 97, 97)
                 .addGroup(AppointmentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(add_reason, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -249,18 +249,18 @@ public class AppointmentSched extends javax.swing.JFrame {
     private javax.swing.JPanel AppointmentSched;
     private javax.swing.JButton add_reason;
     private javax.swing.JButton back_btn;
-    private javax.swing.JTextField date;
+    private javax.swing.JLabel datetxt;
+    private javax.swing.JTextField datetxtbox;
     private javax.swing.JButton delete_reason;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logout_btn;
-    private javax.swing.JTextField reason;
+    private javax.swing.JLabel new_appointment_txt;
+    private javax.swing.JTextField reasontxtbox;
     private javax.swing.JTable tbl_appointments;
-    private javax.swing.JTextField time;
+    private javax.swing.JLabel timetxt;
+    private javax.swing.JTextField timetxtbox;
     private javax.swing.JButton update_reason;
     // End of variables declaration//GEN-END:variables
 }
