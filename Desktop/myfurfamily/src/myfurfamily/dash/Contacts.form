@@ -239,9 +239,9 @@
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="pet_id" min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="findbutton" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="findbutton" pref="29" max="32767" attributes="0"/>
+                              <Component id="pet_id" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="contact_txt" min="-2" max="-2" attributes="0"/>
@@ -323,11 +323,6 @@
                     <Property name="text" type="java.lang.String" value="DELETE"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="pet_id">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pet_idActionPerformed"/>
-                  </Events>
-                </Component>
                 <Component class="javax.swing.JLabel" name="contact_txt">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Contact Type:"/>
@@ -363,6 +358,8 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Search Pet By ID:"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="pet_id">
                 </Component>
               </SubComponents>
             </Container>

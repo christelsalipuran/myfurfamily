@@ -133,15 +133,15 @@
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="pet_id" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <EmptySpace pref="86" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="photo_path" max="32767" attributes="0"/>
                                               <Component id="jLabel4" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
+                                      <Component id="pet_id" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="findbutton" min="-2" pref="68" max="-2" attributes="0"/>
@@ -235,8 +235,6 @@
                     <Property name="text" type="java.lang.String" value="Upload Photo"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="pet_id">
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel4">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -255,6 +253,8 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Search Pet by ID:"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="pet_id">
                 </Component>
               </SubComponents>
             </Container>

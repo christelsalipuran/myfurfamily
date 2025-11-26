@@ -32,13 +32,13 @@ public class Medications extends javax.swing.JFrame {
         delete_pet = new javax.swing.JButton();
         notestxt = new javax.swing.JLabel();
         breed = new javax.swing.JTextField();
-        pet_id = new javax.swing.JButton();
         start_datetxt = new javax.swing.JLabel();
         start_datetxtbox = new javax.swing.JTextField();
         end_datetxtbox = new javax.swing.JTextField();
         end_datetxt = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         findbutton = new javax.swing.JButton();
+        pet_id = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_medications = new javax.swing.JTable();
 
@@ -119,11 +119,11 @@ public class Medications extends javax.swing.JFrame {
                                 .addComponent(end_datetxt)
                                 .addComponent(frequencytxt)
                                 .addComponent(breed, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(notestxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(MedicationsFormLayout.createSequentialGroup()
-                            .addComponent(pet_id, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(findbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(notestxtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MedicationsFormLayout.createSequentialGroup()
+                        .addComponent(pet_id, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(findbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         MedicationsFormLayout.setVerticalGroup(
@@ -132,9 +132,9 @@ public class Medications extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MedicationsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pet_id, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(findbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(MedicationsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(findbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .addComponent(pet_id))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(mednametxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -298,7 +298,7 @@ public class Medications extends javax.swing.JFrame {
     private javax.swing.JLabel mednametxt;
     private javax.swing.JLabel notestxt;
     private javax.swing.JTextField notestxtbox;
-    private javax.swing.JButton pet_id;
+    private javax.swing.JTextField pet_id;
     private javax.swing.JTextField species;
     private javax.swing.JLabel start_datetxt;
     private javax.swing.JTextField start_datetxtbox;

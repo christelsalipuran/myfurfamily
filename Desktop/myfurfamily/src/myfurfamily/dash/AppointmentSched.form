@@ -129,11 +129,11 @@
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="pet_id" max="32767" attributes="0"/>
+                                      <Component id="pet_id" min="-2" pref="206" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="findbutton" min="-2" max="-2" attributes="0"/>
+                                      <Component id="findbutton" min="-2" pref="63" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="new_appointment_txt" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
@@ -236,8 +236,6 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="timetxtbox">
                 </Component>
-                <Component class="javax.swing.JButton" name="pet_id">
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel1">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Search Pet By ID:"/>
@@ -247,6 +245,8 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Find"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="pet_id">
                 </Component>
               </SubComponents>
             </Container>

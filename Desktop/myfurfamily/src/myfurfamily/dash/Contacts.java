@@ -29,7 +29,6 @@ public class Contacts extends javax.swing.JFrame {
         add_pet = new javax.swing.JButton();
         update_pet = new javax.swing.JButton();
         delete_pet = new javax.swing.JButton();
-        pet_id = new javax.swing.JButton();
         contact_txt = new javax.swing.JLabel();
         contact_txtbox = new javax.swing.JTextField();
         email_txtbox = new javax.swing.JTextField();
@@ -39,6 +38,7 @@ public class Contacts extends javax.swing.JFrame {
         notes_txt = new javax.swing.JLabel();
         findbutton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        pet_id = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -119,12 +119,6 @@ public class Contacts extends javax.swing.JFrame {
 
         delete_pet.setText("DELETE");
 
-        pet_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pet_idActionPerformed(evt);
-            }
-        });
-
         contact_txt.setText("Contact Type:");
 
         email_txt.setText("Email:");
@@ -159,7 +153,7 @@ public class Contacts extends javax.swing.JFrame {
                             .addComponent(delete_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(name_txtbox)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactsFormLayout.createSequentialGroup()
-                            .addComponent(pet_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pet_id)
                             .addGap(18, 18, 18)
                             .addComponent(findbutton))
                         .addComponent(contact_txt)
@@ -183,9 +177,9 @@ public class Contacts extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pet_id, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(findbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(findbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .addComponent(pet_id))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contact_txt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -296,10 +290,6 @@ public class Contacts extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_findbuttonActionPerformed
 
-    private void pet_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pet_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pet_idActionPerformed
-
   
     public static void main(String args[]) {
        
@@ -327,7 +317,7 @@ public class Contacts extends javax.swing.JFrame {
     private javax.swing.JTextField name_txtbox;
     private javax.swing.JLabel notes_txt;
     private javax.swing.JTextField notes_txtbox;
-    private javax.swing.JButton pet_id;
+    private javax.swing.JTextField pet_id;
     private javax.swing.JLabel phone_txt;
     private javax.swing.JTextField phone_txtbox;
     private javax.swing.JTable tbl_contacts;
