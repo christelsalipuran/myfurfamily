@@ -38,6 +38,8 @@ public class Contacts extends javax.swing.JFrame {
         notes_txt = new javax.swing.JLabel();
         findbutton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        pet_name = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         pet_id = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -132,7 +134,9 @@ public class Contacts extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Search Pet By ID:");
+        jLabel1.setText("Search By Pet Name:");
+
+        jLabel2.setText("Pet ID:");
 
         javax.swing.GroupLayout ContactsFormLayout = new javax.swing.GroupLayout(ContactsForm);
         ContactsForm.setLayout(ContactsFormLayout);
@@ -140,47 +144,58 @@ public class Contacts extends javax.swing.JFrame {
             ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContactsFormLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(name_txt)
-                        .addComponent(address_txt)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactsFormLayout.createSequentialGroup()
-                            .addComponent(add_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(update_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(12, 12, 12)
-                            .addComponent(delete_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(name_txtbox)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactsFormLayout.createSequentialGroup()
-                            .addComponent(pet_id)
-                            .addGap(18, 18, 18)
-                            .addComponent(findbutton))
-                        .addComponent(contact_txt)
-                        .addComponent(contact_txtbox)
-                        .addGroup(ContactsFormLayout.createSequentialGroup()
-                            .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(phone_txt)
-                                .addComponent(phone_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(email_txtbox)
-                                .addComponent(email_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(notes_txt)
-                        .addComponent(notes_txtbox)
-                        .addComponent(address_txtbox)))
+                .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactsFormLayout.createSequentialGroup()
+                        .addComponent(add_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(update_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(delete_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(name_txtbox)
+                    .addComponent(contact_txtbox)
+                    .addGroup(ContactsFormLayout.createSequentialGroup()
+                        .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(phone_txt)
+                            .addComponent(phone_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(email_txtbox)
+                            .addComponent(email_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(notes_txtbox)
+                    .addComponent(address_txtbox)
+                    .addComponent(name_txt)
+                    .addComponent(address_txt)
+                    .addComponent(contact_txt)
+                    .addComponent(notes_txt)
+                    .addGroup(ContactsFormLayout.createSequentialGroup()
+                        .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(ContactsFormLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pet_id))
+                            .addComponent(jLabel1))
+                        .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ContactsFormLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(pet_name))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactsFormLayout.createSequentialGroup()
+                                .addGap(132, 132, 132)
+                                .addComponent(findbutton)))))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         ContactsFormLayout.setVerticalGroup(
             ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContactsFormLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(findbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-                    .addComponent(pet_id))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(25, 25, 25)
+                .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(pet_name))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ContactsFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(findbutton)
+                    .addComponent(pet_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(contact_txt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contact_txtbox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -254,9 +269,9 @@ public class Contacts extends javax.swing.JFrame {
         );
         ContactsLayout.setVerticalGroup(
             ContactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 553, Short.MAX_VALUE)
+            .addGap(0, 559, Short.MAX_VALUE)
             .addGroup(ContactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE))
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -310,6 +325,7 @@ public class Contacts extends javax.swing.JFrame {
     private javax.swing.JTextField email_txtbox;
     private javax.swing.JButton findbutton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logout_btn;
@@ -318,6 +334,7 @@ public class Contacts extends javax.swing.JFrame {
     private javax.swing.JLabel notes_txt;
     private javax.swing.JTextField notes_txtbox;
     private javax.swing.JTextField pet_id;
+    private javax.swing.JTextField pet_name;
     private javax.swing.JLabel phone_txt;
     private javax.swing.JTextField phone_txtbox;
     private javax.swing.JTable tbl_contacts;

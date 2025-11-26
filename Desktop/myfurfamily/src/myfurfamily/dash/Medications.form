@@ -130,43 +130,51 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="start_datetxtbox" min="-2" pref="134" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="end_datetxtbox" min="-2" pref="134" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="start_datetxtbox" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="end_datetxtbox" min="-2" pref="134" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="notestxt" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="add_pet" min="-2" pref="79" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="update_pet" min="-2" pref="91" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="delete_pet" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="medname_txtbox" alignment="0" min="-2" pref="281" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="dosage_txtbox" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
+                                      <Component id="dosagetxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="start_datetxt" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="notestxt" min="-2" max="-2" attributes="0"/>
-                                  <Component id="mednametxt" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="add_pet" min="-2" pref="79" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="update_pet" min="-2" pref="91" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="delete_pet" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="end_datetxt" min="-2" max="-2" attributes="0"/>
+                                      <Component id="frequencytxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="frequency_txtbox" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="medname_txtbox" alignment="0" min="-2" pref="281" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="species" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
-                                          <Component id="dosagetxt" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="start_datetxt" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="end_datetxt" min="-2" max="-2" attributes="0"/>
-                                          <Component id="frequencytxt" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="breed" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="notestxtbox" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="notestxtbox" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="pet_name" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="pet_id" min="-2" pref="202" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="findbutton" min="-2" pref="64" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="pet_id" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="mednametxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="findbutton" min="-2" pref="63" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="27" max="32767" attributes="0"/>
@@ -176,12 +184,16 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="pet_name" alignment="3" max="32767" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="findbutton" pref="29" max="32767" attributes="0"/>
-                              <Component id="pet_id" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="pet_id" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="findbutton" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                           <Component id="mednametxt" min="-2" max="-2" attributes="0"/>
@@ -194,8 +206,8 @@
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="species" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="breed" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="dosage_txtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="frequency_txtbox" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -217,7 +229,7 @@
                               <Component id="update_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                               <Component id="delete_pet" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="72" max="32767" attributes="0"/>
+                          <EmptySpace pref="81" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -235,7 +247,7 @@
                     <Property name="text" type="java.lang.String" value="Dosage:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="species">
+                <Component class="javax.swing.JTextField" name="dosage_txtbox">
                 </Component>
                 <Component class="javax.swing.JLabel" name="frequencytxt">
                   <Properties>
@@ -264,7 +276,7 @@
                     <Property name="text" type="java.lang.String" value="Notes:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="breed">
+                <Component class="javax.swing.JTextField" name="frequency_txtbox">
                 </Component>
                 <Component class="javax.swing.JLabel" name="start_datetxt">
                   <Properties>
@@ -282,7 +294,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Search Pet By ID:"/>
+                    <Property name="text" type="java.lang.String" value="Search By Pet Name:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="findbutton">
@@ -290,7 +302,17 @@
                     <Property name="text" type="java.lang.String" value="Find"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JTextField" name="pet_name">
+                </Component>
                 <Component class="javax.swing.JTextField" name="pet_id">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pet_idActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Pet ID:"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
